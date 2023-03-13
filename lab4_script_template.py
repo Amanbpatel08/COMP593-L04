@@ -34,11 +34,6 @@ def generate_port_traffic_report(log_file, port_number):
 
 # TODO: Step 11
 def generate_invalid_user_report(log_file):
-    regex = r"(.{6}) (.{8}) .*user(.+) .*from(.+)"
-    captured_data = filter_log_by_regex(log_file, regex)[1]
-    report_df = pd.DataFrame(captured_data)
-    report_header = ('Date', 'Time', 'Username', 'IP Address')
-    report_df.to_csv('invalid_users.csv', index=False,header=report_header)
     return
 
 # TODO: Step 12
